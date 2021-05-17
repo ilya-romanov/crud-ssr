@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include('partials/navbar.ejs', {page: 'readAll', exp }) %>
+
+        <table class="table mx-auto mb-5 w-75">
+            <thead>
+                <tr>
+                    <th scope="col">Article Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let res of response) { %>
+                 <tr>
+                    <td> <%= res.articleNo %> </td>
+                    <td> <%= res.name %> </td>
+                    <td> <%= res.description %> </td>
+                    <td> <%= res.price %> </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+    <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>

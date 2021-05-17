@@ -1,0 +1,17 @@
+/* custom settings */
+html {
+    font-size: 24px;
+}
+
+.seperator {
+    border-top: 2px solid white;
+}
+
+@media (min-width: 992px) {
+    .seperator {
+            border: none;
+            border-left: 2px solid white;
+
+    }
+}
+

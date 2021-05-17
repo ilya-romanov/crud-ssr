@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include('partials/navbar.ejs', {page: 'delete', exp }) %>
+
+        <form class="mx-auto w-50 mt-5" action='/delete' method="POST">
+            <div class="mb-3">
+                <label for="articleNo" class="form-label">Article Number</label>
+                <input type="text" class="form-control" name="articleNo" id="articleNo"
+                    aria-describedby="articleNoHelp">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Delete</button>
+        </form>
+
+        <ul id='responses' class="list-unstyled text-center mx-auto mt-5 w-75">
+            <li>
+                <%= response %>
+            </li>
+        </ul>
+
+        <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+    <!-- custom -->
+    <script defer src="../public/js/register.js"></script>
+</head>
+
+<body>
+
+    <%- include('partials/navbar.ejs', {page: 'register', exp }) %>
+
+        <form class="mx-auto w-50 mt-5" action='/register' method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+
+        <ul id='responses' class="list-unstyled text-center mx-auto mt-5 w-75">
+            <li>
+                <%= response %>
+            </li>
+        </ul>
+
+        <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>

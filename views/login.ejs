@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+
+    <%- include('partials/navbar.ejs', {page: 'login', exp }) %>
+
+        <form class="mx-auto w-50 mt-5" action='/login' method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+
+        <ul id='responses' class="list-unstyled text-break text-center mx-auto mt-5 w-75">
+            <li>
+                <%= response %>
+            </li>
+        </ul>
+
+        <%- include('partials/footer.ejs') %>
+
+</body>
+
+</html>
